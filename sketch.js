@@ -64,7 +64,7 @@ function setup() {
 function draw() {
   background(180);
   
-  score = score + 0.5;
+  
   text("Score: "+ Math.round(score), 500,50);
   
   if(gameState===PLAY){
@@ -75,6 +75,7 @@ function draw() {
     if (ground.x < 0){
     ground.x = ground.width/2;
   }
+   score = score + 0.5;
   spawnClouds();
   spawnObstacles();
     if(trex.isTouching(obstaclesGroup)){
